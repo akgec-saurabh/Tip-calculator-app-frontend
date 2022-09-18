@@ -1,0 +1,315 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary */
+
+  --strong-cyan: hsl(172, 67%, 45%);
+
+  /* Neutral */
+
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Space Mono", monospace;
+  background-color: var(--light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font: 16px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--very-dark-cyan);
+  font-size: 18px;
+  margin: 1rem;
+}
+
+.box {
+  display: flex;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 1.5rem;
+  height: 450px;
+}
+
+.left {
+  background-color: var(--white);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  margin-right: 2rem;
+}
+
+#bill {
+  border-radius: 0.25rem;
+  cursor: pointer;
+  color: var(--very-dark-cyan);
+  outline: 0;
+  width: 100%;
+  text-align: end;
+  display: flex;
+  background: url("./images/icon-dollar.svg") no-repeat scroll 10px 50%;
+  background-color: var(--very-light-grayish-cyan);
+
+  background-size: 12px;
+  height: 2.4rem;
+  padding-right: 0.625rem;
+  border: none;
+  font-family: "Space Mono", monospace;
+
+  font-size: 24px;
+  margin-top: 0.5rem;
+  caret-color: var(--grayish-cyan);
+}
+
+#bill:focus {
+  border: 2px solid var(--strong-cyan);
+}
+#bill::placeholder {
+  color: var(--grayish-cyan);
+}
+
+.c2 p {
+  margin-bottom: 0.5rem;
+}
+.tips {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tip {
+  background-color: var(--very-dark-cyan);
+  color: var(--white);
+  text-align: center;
+  border-radius: 0.25rem;
+  height: 2.4rem;
+  display: flex;
+  flex-basis: 100px;
+  flex-shrink: 1;
+  flex-grow: 1;
+
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+#custom {
+  min-width: unset;
+  background-color: var(--very-light-grayish-cyan);
+  /* flex-basis: 100px; */
+  /* flex-shrink: 1; */
+  /* flex-grow: 1; */
+  width: 100%;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--very-dark-cyan);
+  text-align: end;
+  padding-right: 0.625rem;
+  border-radius: 0.25rem;
+  height: 2.4rem;
+  font-family: "Space Mono", monospace;
+
+  border: none;
+  outline: 0;
+  caret-color: var(--grayish-cyan);
+}
+#custom::placeholder {
+  color: var(--grayish-cyan);
+  text-align: center;
+}
+
+#custom:focus {
+  border: 2px solid var(--strong-cyan);
+}
+
+.tip:hover {
+  background-color: var(--light-grayish-cyan);
+  color: var(--very-dark-cyan);
+  transition: 0.5s;
+}
+.tip:active {
+  background-color: var(--strong-cyan);
+}
+
+/* class to be added when tip is selected */
+.tip-selected {
+  background-color: var(--strong-cyan);
+}
+/* Code to remove arrow in input numbers */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.c3 {
+  position: relative;
+}
+
+.c3 label {
+  margin-top: 1.5rem;
+}
+
+.error {
+  color: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+}
+
+#peoples {
+  outline: 0;
+  width: 100%;
+  text-align: end;
+  display: flex;
+  background: url("./images/icon-person.svg") no-repeat scroll 10px 50%;
+  background-size: 12px;
+  height: 2.4rem;
+  padding-right: 10px;
+  font-family: "Space Mono", monospace;
+  font-size: 24px;
+  background-color: var(--very-light-grayish-cyan);
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  caret-color: var(--grayish-cyan);
+  margin-top: 0.5rem;
+}
+#peoples:focus {
+  border: 2px solid var(--strong-cyan);
+}
+
+/* When 0 is entered */
+.error0 {
+  border: 2px solid red !important;
+}
+
+.c1 label,
+.c2 p,
+.c3 label {
+  color: var(--dark-grayish-cyan);
+}
+
+.right {
+  background-color: var(--very-dark-cyan);
+  width: 50%;
+  border-radius: 0.8rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  padding: 2rem;
+}
+
+.tip-container,
+.total-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tip-amount,
+.total-amount {
+  color: var(--strong-cyan);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.total-description p:nth-of-type(2),
+.tip-description p:nth-of-type(2) {
+  font-size: 14px;
+  color: var(--grayish-cyan);
+}
+
+.reset {
+  background-color: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.reset:hover {
+  background-color: var(--light-grayish-cyan);
+  transform: scale(1.05);
+}
+.reset:active {
+  background-color: var(--strong-cyan);
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    margin: 0.5rem;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    height: unset;
+    max-width: 500px;
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+  .right {
+    padding: 1rem;
+  }
+  .tip-amount,
+  .total-amount {
+    font-size: 2rem;
+  }
+  .tip-container,
+  .total-container {
+    margin: 1rem 0;
+  }
+  .error {
+    font-size: 14px;
+  }
+  .c1,
+  .c2,
+  .c3 {
+    margin-top: 1rem;
+  }
+}
+@media (max-width: 300px) {
+  .tip-container,
+  .total-container {
+    flex-direction: column;
+    justify-self: start;
+  }
+  .error {
+    top: 16px;
+    left: 0;
+    font-size: 0.625;
+  }
+}
