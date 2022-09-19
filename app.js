@@ -87,3 +87,10 @@ peoples.addEventListener("input", function () {
     peoples.classList.remove("error0");
   }
 });
+
+peoples.addEventListener("keydown", function (event) {
+  if (event.key === ".") {
+    event.value = "";
+    event.preventDefault();
+  }
+});
